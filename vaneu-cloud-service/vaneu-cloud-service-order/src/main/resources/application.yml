@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: vaneu-cloud-order
+    name: service-order
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848    #指定Nacos服务地址
@@ -62,6 +62,6 @@ management:
         include: '*'
 
 logging:
-  file: vaneu-cloud-service-order.log
+  file: service-order.log
   level:
     com.vaneu: debug 

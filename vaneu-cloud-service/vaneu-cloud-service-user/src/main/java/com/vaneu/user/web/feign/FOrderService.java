@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @version V1.0
  */
 
-@FeignClient(name = "vaneu-cloud-order")
+@FeignClient(name = "service-order")
 public interface FOrderService {
 
 	@RequestMapping("/v1/order/get/{id}")

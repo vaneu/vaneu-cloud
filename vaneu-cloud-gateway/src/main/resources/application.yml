@@ -13,16 +13,16 @@ spring:
       discovery:
         locator:
           enabled: true #开启基于服务的注册和发现的路由转发,默认轮询模式
-      routes:        - id: vaneu-cloud-service-order
-          uri: lb://vaneu-cloud-service-order
+      routes:        - id: service-order
+          uri: lb://service-order
           predicates:
-            - Path=/**
+            - Path=/order/**
           filters:
             - StripPrefix=1
-        - id: vaneu-cloud-service-user
-          uri: lb://vaneu-cloud-service-user
+        - id: service-user
+          uri: lb://service-user
           predicates:
-            - Path=/**
+            - Path=/user/**
           filters:
             - StripPrefix=1
 #      routes: #路由配置

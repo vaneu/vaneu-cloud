@@ -46,7 +46,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("订单API")
+                .title("用户API")
                 .description("公司名称")
                 .termsOfServiceUrl("http://www.vaneu.com")
                 .version("1.0")
