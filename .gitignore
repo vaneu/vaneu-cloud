@@ -1,0 +1,14 @@
+*.log*
+*/.git/*
+.classpath
+.deployables
+.factorypath
+.git
+.project
+.settings
+.springBeans
+.sts4-cache
+.svn
+_svn
+target
+
