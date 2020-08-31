@@ -22,10 +22,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
 
 		<!-- Mybatis-Plus -->
 		<dependency>
@@ -41,18 +37,18 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>com.alibaba.cloud</groupId> -->
-		<!-- <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId> -->
-		<!-- </dependency> -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>com.alibaba.cloud</groupId> -->
-		<!-- <artifactId>spring-cloud-starter-alibaba-seata</artifactId> -->
-		<!-- </dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.alibaba.cloud</groupId> -->
+<!-- 			<artifactId>spring-cloud-starter-alibaba-seata</artifactId> -->
+<!-- 		</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -64,7 +60,7 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -79,7 +75,7 @@
 
 		<dependency>
 			<groupId>com.vaneu</groupId>
-			<artifactId>vaneu-cloud-common</artifactId>
+			<artifactId>vaneu-cloud-service-api</artifactId>
 		</dependency>
 	</dependencies>
 

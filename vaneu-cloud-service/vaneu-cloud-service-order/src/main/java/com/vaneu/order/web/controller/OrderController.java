@@ -1,5 +1,8 @@
 package com.vaneu.order.web.controller;
 
+import javax.validation.constraints.NotNull;
+
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,10 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.vaneu.api.order.IFOrderService;
+import com.vaneu.api.user.IFUserService;
 import com.vaneu.common.Result;
+import com.vaneu.dto.OrderDto;
 import com.vaneu.order.domain.Order;
 import com.vaneu.order.service.IOrderService;
-import com.vaneu.order.web.feign.FUserService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -32,10 +37,10 @@ import lombok.extern.slf4j.Slf4j;
 @Api(tags = "订单")
 @RestController
 @RequestMapping("/v1/order")
-public class OrderController {
+public class OrderController implements IFOrderService{
 
 	@Autowired IOrderService orderService;
-	@Autowired FUserService userService;
+	@Autowired IFUserService userService;
 	
 	@ApiOperation("提交订单")
 	@PostMapping("/add")
@@ -56,13 +61,21 @@ public class OrderController {
 	@PostMapping("/list")
 	public Result<IPage<Order>> getPage(long current, long size){
 		Page<Order> page = new Page<>(current, size);
-		log.debug(userService.getUser(5));
+		log.debug(userService.getUser(5).toString());
 		return new Result<IPage<Order>>().success(orderService.page(page));
 	}
 	
+	
+	@ApiOperation(value = "获取订单")
+	@ApiImplicitParams({
+    	@ApiImplicitParam(name = "id", value="编号", required = true, dataTypeClass = Long.class),
+    })
 	@GetMapping("/get/{id}")
-	public Order getOrder(@PathVariable long id) {
-		return orderService.getById(id);
+	public OrderDto getOrder(@NotNull @PathVariable long id) {
+		Order order = orderService.getById(id);
+		OrderDto orderDto = new OrderDto();
+		BeanUtils.copyProperties(order, order);
+		return orderDto;
 	}
 }
 

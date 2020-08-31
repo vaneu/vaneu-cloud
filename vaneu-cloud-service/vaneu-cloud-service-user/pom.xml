@@ -40,10 +40,10 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
-		<!-- <dependency> -->
-		<!-- <groupId>com.alibaba.cloud</groupId> -->
-		<!-- <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId> -->
-		<!-- </dependency> -->
+		<dependency>
+			<groupId>com.alibaba.cloud</groupId>
+			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -78,8 +78,9 @@
 
 		<dependency>
 			<groupId>com.vaneu</groupId>
-			<artifactId>vaneu-cloud-common</artifactId>
+			<artifactId>vaneu-cloud-service-api</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<build>

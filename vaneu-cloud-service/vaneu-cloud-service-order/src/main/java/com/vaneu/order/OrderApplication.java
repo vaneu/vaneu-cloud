@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import com.alibaba.nacos.api.config.annotation.NacosConfigurationProperties;
 
 /**
  * @ClassName: OrderApplication
@@ -14,8 +14,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author vaneu
  * @date 2020-8-28 9:35:36
  */
-@EnableSwagger2
 @EnableFeignClients
+@NacosConfigurationProperties(autoRefreshed = true, dataId = "vaneu-cloud-service-user-dev.yaml")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class OrderApplication {

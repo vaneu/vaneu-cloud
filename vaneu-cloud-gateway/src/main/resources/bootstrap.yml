@@ -1,0 +1,16 @@
+
+server:
+  port: 8000
+  
+spring:
+  application:
+    name: vaneu-cloud-gateway
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848   #指定Nacos服务地址
+      discovery:
+        service: ${spring.application.name}
+        namespace: vaneu            #命名空间ID
+      config:
+        file-extension: yaml
+        namespace: ${spring.cloud.nacos.discovery.namespace}

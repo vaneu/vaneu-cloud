@@ -4,16 +4,30 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.vaneu</groupId>
-		<artifactId>vaneu-cloud</artifactId>
+		<artifactId>vaneu-cloud-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>vaneu-cloud-common</artifactId>
+	<artifactId>vaneu-cloud-service-api</artifactId>
 
 	<dependencies>
-		<!-- Swagger -->
+		<dependency>
+			<groupId>com.vaneu</groupId>
+			<artifactId>vaneu-cloud-common</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-annotations</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-openfeign-core</artifactId>
 		</dependency>
 	</dependencies>
 </project>
