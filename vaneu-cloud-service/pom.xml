@@ -11,9 +11,9 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>vaneu-cloud-service-api</module>
 		<module>vaneu-cloud-service-order</module>
 		<module>vaneu-cloud-service-user</module>
-		<module>vaneu-cloud-service-api</module>
 	</modules>
 
 	<properties>
