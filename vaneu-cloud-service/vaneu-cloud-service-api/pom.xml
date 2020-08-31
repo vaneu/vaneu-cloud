@@ -27,25 +27,30 @@
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-openfeign-core</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-autoconfigure</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework.cloud</groupId>
-					<artifactId>spring-cloud-netflix-ribbon</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-aop</artifactId>
-				</exclusion>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework.cloud</groupId> -->
+<!-- 			<artifactId>spring-cloud-openfeign-core</artifactId> -->
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>org.springframework.boot</groupId> -->
+<!-- 					<artifactId>spring-boot-autoconfigure</artifactId> -->
+<!-- 				</exclusion> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>org.springframework.cloud</groupId> -->
+<!-- 					<artifactId>spring-cloud-netflix-ribbon</artifactId> -->
+<!-- 				</exclusion> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>org.springframework.boot</groupId> -->
+<!-- 					<artifactId>spring-boot-starter-aop</artifactId> -->
+<!-- 				</exclusion> -->
 <!-- 				<exclusion> -->
 <!-- 					<groupId>io.github.openfeign.form</groupId> -->
 <!-- 					<artifactId>feign-form-spring</artifactId> -->
 <!-- 				</exclusion> -->
-			</exclusions>
-		</dependency>
+<!-- 			</exclusions> -->
+<!-- 		</dependency> -->
 	</dependencies>
 </project>

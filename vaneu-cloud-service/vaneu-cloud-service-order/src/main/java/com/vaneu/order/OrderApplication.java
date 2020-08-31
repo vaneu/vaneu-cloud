@@ -14,7 +14,7 @@ import com.alibaba.nacos.api.config.annotation.NacosConfigurationProperties;
  * @author vaneu
  * @date 2020-8-28 9:35:36
  */
-@EnableFeignClients
+@EnableFeignClients("com.vaneu.api")
 @NacosConfigurationProperties(autoRefreshed = true, dataId = "vaneu-cloud-service-user-dev.yaml")
 @EnableDiscoveryClient
 @SpringBootApplication
