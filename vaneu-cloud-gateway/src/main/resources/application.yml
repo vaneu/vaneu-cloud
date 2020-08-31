@@ -7,20 +7,24 @@ spring:
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848    #指定Nacos服务地址
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080   #指定Sentinel DashBoard服务地址
+        port: 9000                  #默认9000端口，假如被占用会自动从9000开始依次+1扫描，直至找到未被占用的端口
       
     #gateway组件相关配置
     gateway:
       discovery:
         locator:
           enabled: true #开启基于服务的注册和发现的路由转发,默认轮询模式
-      routes:        - id: service-order
-          uri: lb://service-order
+      routes:        - id: vaneu-cloud-service-order
+          uri: lb://vaneu-cloud-service-order
           predicates:
             - Path=/order/**
           filters:
             - StripPrefix=1
-        - id: service-user
-          uri: lb://service-user
+        - id: vaneu-cloud-service-user
+          uri: lb://vaneu-cloud-service-user
           predicates:
             - Path=/user/**
           filters:

@@ -9,19 +9,20 @@
 	</parent>
 	<artifactId>vaneu-cloud-service</artifactId>
 	<packaging>pom</packaging>
-	
+
 	<modules>
 		<module>vaneu-cloud-service-order</module>
 		<module>vaneu-cloud-service-user</module>
-  	</modules>
-  	
-  	<properties>
-  		<druid.version>1.1.23</druid.version>
+	</modules>
+
+	<properties>
+		<druid.version>1.1.23</druid.version>
 		<mybatis-plus.version>3.3.1</mybatis-plus.version>
-<!-- 		<mybatis-plus.version>3.4.0</mybatis-plus.version> -->
+		<!-- <mybatis-plus.version>3.4.0</mybatis-plus.version> -->
+		<vaneu-cloud-common.version>0.0.1-SNAPSHOT</vaneu-cloud-common.version>
 	</properties>
-  	
-  	<dependencyManagement>
+
+	<dependencyManagement>
 		<dependencies>
 			<!-- Mybatis-Plus -->
 			<dependency>
@@ -29,11 +30,17 @@
 				<artifactId>mybatis-plus-boot-starter</artifactId>
 				<version>${mybatis-plus.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid-spring-boot-starter</artifactId>
 				<version>${druid.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.vaneu</groupId>
+				<artifactId>vaneu-cloud-common</artifactId>
+				<version>${vaneu-cloud-common.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

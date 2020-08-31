@@ -48,10 +48,6 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-		</dependency>
 		<!-- <dependency> -->
 		<!-- <groupId>com.alibaba.cloud</groupId> -->
 		<!-- <artifactId>spring-cloud-starter-alibaba-seata</artifactId> -->
@@ -67,10 +63,6 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>io.springfox</groupId> -->
-<!-- 			<artifactId>springfox-swagger-ui</artifactId> -->
-<!-- 		</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -87,7 +79,6 @@
 		<dependency>
 			<groupId>com.vaneu</groupId>
 			<artifactId>vaneu-cloud-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

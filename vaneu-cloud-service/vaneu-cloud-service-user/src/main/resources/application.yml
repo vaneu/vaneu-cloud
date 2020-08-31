@@ -3,14 +3,10 @@ server:
   
 spring:
   application:
-    name: service-user
+    name: vaneu-cloud-service-user
   cloud:
     nacos:
       server-addr: 127.0.0.1:8848   #指定Nacos服务地址
-    sentinel:
-      transport:
-        dashboard: 127.0.0.1:8080   #指定Sentinel DashBoard服务地址
-        port: 9000                  #默认9000端口，假如被占用会自动从9000开始依次+1扫描，直至找到未被占用的端口
         
   datasource:
     name: druidDataSource
@@ -62,6 +58,6 @@ management:
         include: '*'
 
 logging:
-  file: service-user.log
+  file: vaneu-cloud-service-user.log
   level:
     com.vaneu: debug 
