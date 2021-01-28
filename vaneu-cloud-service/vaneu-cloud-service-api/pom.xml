@@ -11,11 +11,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.vaneu</groupId>
-			<artifactId>vaneu-cloud-common</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-annotations</artifactId>
 		</dependency>

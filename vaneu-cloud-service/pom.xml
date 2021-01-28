@@ -18,17 +18,17 @@
 
 	<properties>
 		<druid.version>1.1.23</druid.version>
-		<mybatis-plus.version>3.3.1</mybatis-plus.version>
-		<!-- <mybatis-plus.version>3.4.0</mybatis-plus.version> -->
+<!-- 		<mybatis-plus.version>3.3.1</mybatis-plus.version> -->
+		<mybatis-plus.version>3.4.0</mybatis-plus.version>
 		<feign-okhttp.version>11.0</feign-okhttp.version>
 		
-		<vaneu-cloud-common.version>0.0.1-SNAPSHOT</vaneu-cloud-common.version>
 		<vaneu-cloud-service-api.version>0.0.1-SNAPSHOT</vaneu-cloud-service-api.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
 			<!-- Mybatis-Plus -->
+			<!-- https://github.com/baomidou/mybatis-plus-samples -->
 			<dependency>
 				<groupId>com.baomidou</groupId>
 				<artifactId>mybatis-plus-boot-starter</artifactId>
@@ -47,11 +47,6 @@
 				<version>${feign-okhttp.version}</version>
 			</dependency>
 
-			<dependency>
-				<groupId>com.vaneu</groupId>
-				<artifactId>vaneu-cloud-common</artifactId>
-				<version>${vaneu-cloud-common.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>com.vaneu</groupId>
 				<artifactId>vaneu-cloud-service-api</artifactId>
